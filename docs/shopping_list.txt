@@ -1,7 +1,7 @@
 A Shopping List app!
 
 Users can
-  - Add items to a master list
-  - Compose shopping lists from the master list
+  - Add/Edit/Delete items to a master list
   - Create recipes from items in the master list
-  - Pick
+  - Compose shopping lists from items in the master list and recipes
+  - Items can be removed from the shopping list
