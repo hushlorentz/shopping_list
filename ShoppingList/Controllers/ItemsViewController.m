@@ -1,12 +1,15 @@
 #import "Item.h"
+#import "ItemListPersistence.h"
 #import "ItemsViewController.h"
 #import "UpdateItemViewController.h"
 
 @implementation ItemsViewController
 
+NSString *itemsListFileName = @"items_list.dat";
+
 - (void)viewDidLoad
 {
-    self.itemList = [[NSMutableArray alloc] init];
+    self.itemList = [[NSMutableArray alloc] initWithArray:[ItemListPersistence loadItemListFromFile:itemsListFileName]];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
@@ -46,6 +49,7 @@
     if ([self.itemList indexOfObject:item] == NSNotFound)
     {
         [self.itemList addObject:item];
+        [ItemListPersistence saveItemList:self.itemList toFile:itemsListFileName];
     }
 }
 

@@ -14,13 +14,26 @@
     return self;
 }
 
-- (BOOL)isEqual:(id)object
+- (id)initWithCoder:(NSCoder *)decoder
 {
-    if (![object isKindOfClass:[Item class]]) {
-        return NO;
+    self = [super init];
+    
+    if (self)
+    {
+        self.name = [decoder decodeObjectForKey:@"name"];
     }
     
+    return self;
+}
+
+- (BOOL)isEqual:(id)object
+{
     return [[self.name lowercaseString] isEqualToString:[((Item *)object).name lowercaseString]];
+}
+
+- (void)encodeWithCoder:(NSCoder *)encoder
+{
+    [encoder encodeObject:self.name forKey:@"name"];
 }
 
 @end

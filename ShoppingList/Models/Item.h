@@ -1,6 +1,6 @@
 #import <Foundation/Foundation.h>
 
-@interface Item : NSObject
+@interface Item : NSObject<NSCoding>
 
 -(id)init:(NSString *)name;
 
