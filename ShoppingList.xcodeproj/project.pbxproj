@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E62E47320AA976B00158BA8 /* ShowListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E62E47220AA976B00158BA8 /* ShowListViewController.m */; };
 		4E94EDF220A783750034F983 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E94EDF120A783750034F983 /* main.m */; };
 		4E94EDF520A783750034F983 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E94EDF420A783750034F983 /* AppDelegate.m */; };
 		4E94EDFE20A783750034F983 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E94EDFC20A783750034F983 /* Main.storyboard */; };
@@ -51,6 +52,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4E62E47120AA976B00158BA8 /* ShowListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShowListViewController.h; path = Controllers/ShowListViewController.h; sourceTree = "<group>"; };
+		4E62E47220AA976B00158BA8 /* ShowListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ShowListViewController.m; path = Controllers/ShowListViewController.m; sourceTree = "<group>"; };
 		4E94EDED20A783750034F983 /* ShoppingList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShoppingList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E94EDF120A783750034F983 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4E94EDF320A783750034F983 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -209,6 +212,8 @@
 				4E94EE3D20A7A56C0034F983 /* UpdateItemViewController.m */,
 				4EAF33AF20A9504800F94EA6 /* UpdateListItemViewController.h */,
 				4EAF33B020A9504800F94EA6 /* UpdateListItemViewController.m */,
+				4E62E47120AA976B00158BA8 /* ShowListViewController.h */,
+				4E62E47220AA976B00158BA8 /* ShowListViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -366,6 +371,7 @@
 				4E94EE3220A790530034F983 /* Recipe.m in Sources */,
 				4EAF33B120A9504800F94EA6 /* UpdateListItemViewController.m in Sources */,
 				4E94EE3620A796E10034F983 /* ListItem.m in Sources */,
+				4E62E47320AA976B00158BA8 /* ShowListViewController.m in Sources */,
 				4E94EDF520A783750034F983 /* AppDelegate.m in Sources */,
 				4E94EE3E20A7A56C0034F983 /* UpdateItemViewController.m in Sources */,
 				4EAF33B720A95A9200F94EA6 /* ItemsViewController.m in Sources */,

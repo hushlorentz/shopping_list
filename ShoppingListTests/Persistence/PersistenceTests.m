@@ -9,6 +9,7 @@
 #import <XCTest/XCTest.h>
 #import "Item.h"
 #import "ItemListPersistence.h"
+#import "ListItem.h"
 
 @interface PersistenceTests : XCTestCase
 
@@ -80,6 +81,16 @@ NSString *fileName = @"item.txt";
     NSArray *restoredList = [ItemListPersistence loadItemListFromFile:fileName];
     
     XCTAssertEqual([restoredList count], 0);
+}
+
+- (void)testAListOfListItemsCanBeSavedAndRestoredInMemory
+{
+    ListItem *listItem = [[ListItem alloc] initWithName:@"List Item" andAmount:@"Amount"];
+    
+    NSData *listItemData = [NSKeyedArchiver archivedDataWithRootObject:listItem];
+    Item *restoredListItem = [NSKeyedUnarchiver unarchiveObjectWithData:listItemData];
+    
+    XCTAssertEqualObjects(restoredListItem, listItem);
 }
 
 @end

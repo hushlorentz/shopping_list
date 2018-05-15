@@ -32,8 +32,12 @@
 
 - (IBAction)saveItemAndClose
 {
-    //[self.item setName:self.itemNameField.text];
-    //[self.delegate processObject:self.item];
+    NSInteger row = [self.itemPicker selectedRowInComponent:0];
+    ListItem *selectedItem = (ListItem *)[self.itemsList objectAtIndex:row];
+
+    [self.listItem setName:selectedItem.name];
+    [self.listItem setAmount:self.amountField.text];
+    [self.delegate processObject:self.listItem];
     [self closeViewController];
 }
 
