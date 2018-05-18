@@ -7,17 +7,11 @@
 - (void)viewDidLoad
 {
     [self loadItemsList];
-    [self updateFields];
 }
 
 - (void)loadItemsList
 {
     self.itemsList = [ItemListPersistence loadItemListFromFile:@"items_list.dat"];
-}
-
-- (void)updateFields
-{
-    //[self.itemNameField setText:self.item.name];
 }
 
 - (IBAction)cancelItemUpdateAndClose
@@ -55,6 +49,12 @@
 {
     Item *item = (Item *)self.itemsList[row];
     return item.name;
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    return YES;
 }
 
 @end

@@ -2,7 +2,7 @@
 #import "ListItem.h"
 #import "ProcessObjectProtocol.h"
 
-@interface UpdateListItemViewController : UIViewController <UIPickerViewDataSource, UIPickerViewDelegate>
+@interface UpdateListItemViewController : UIViewController <UIPickerViewDataSource, UIPickerViewDelegate, UITextFieldDelegate>
 
 @property(nonatomic) ListItem *listItem;
 @property(nonatomic) NSArray *itemsList;
